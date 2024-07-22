@@ -106,7 +106,7 @@ class TaskControllerTest extends TestCase
         $task = Task::factory()->create(['user_id' => $user->id]);
     
         $response = $this->deleteJson(route('tasks.update', $task));
-        $response->assertStatus(200);
+        $response->assertStatus(204);
 
         $this->assertDatabaseCount('tasks', 0);
 

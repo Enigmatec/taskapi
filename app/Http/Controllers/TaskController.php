@@ -62,7 +62,7 @@ class TaskController extends Controller
         return response()->json([
             "status" => true,
             "message" => "Task Deleted"
-        ]);
+        ], 204);
 
     }
 }
